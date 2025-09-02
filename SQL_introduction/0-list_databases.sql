@@ -1,2 +1,2 @@
--- script to create a table first_table
+-- script to list all databases
 SHOW DATABASES;
