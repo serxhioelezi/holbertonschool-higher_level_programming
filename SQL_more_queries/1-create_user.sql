@@ -1,5 +1,6 @@
--- write a scipt that creates a user
-CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY `user_0d_1_pwd`;
-
--- write a script that grants all privileges to a user
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
+-- Query to list all TV shows with their genre IDs
+SELECT tv_shows.title AS title, tv_show_genres.genre_id AS genre_id
+FROM tv_shows
+LEFT JOIN tv_show_genres
+    ON tv_shows.id = tv_show_genres.show_id
+ORDER BY tv_shows.title, tv_show_genres.genre_id ASC;
