@@ -1,6 +1,5 @@
--- whith joins
+-- Query to list all cities with their corresponding state names
 SELECT cities.id, cities.name, states.name
 FROM cities
-JOIN states
-ON state_id = cities.states.id
-order by cities.id ASC;
+JOIN states ON cities.state_id = states.id
+ORDER BY cities.id ASC;
