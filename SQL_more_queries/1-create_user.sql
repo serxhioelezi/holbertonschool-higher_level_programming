@@ -1,6 +1,5 @@
--- Query to list all TV shows with their genre IDs
-SELECT tv_shows.title AS title, tv_show_genres.genre_id AS genre_id
-FROM tv_shows
-LEFT JOIN tv_show_genres
-    ON tv_shows.id = tv_show_genres.show_id
-ORDER BY tv_shows.title, tv_show_genres.genre_id ASC;
+-- write a script that creates a user with name user_0d_1 and password 'user_0d_1_pwd'
+CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
+
+-- write a script that grants all privileges to user
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
